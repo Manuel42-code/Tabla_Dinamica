@@ -1,0 +1,174 @@
+body{
+    background: #f0f8ea;
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header{
+    background: #1df07c;
+    color: #ebebd3;
+    padding: 1em 0;
+    position: relative;
+    height: 20%;
+}
+
+header::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+header nav {
+    max-width: 1000px;
+    margin: 10px auto;
+    background-color: rgb(251, 253, 251);;
+    margin-top: -110px;
+}
+
+.menu{
+    top:100%;
+    right:0;
+    position: absolute;
+    background: #464655;
+    clip-path: circle(0px at top right);
+    transition: clip-path ease-in-out 700ms;
+}
+.menu-open{
+    clip-path: circle(150% at top right);
+}
+.menu ul{
+    margin: right;
+    padding: 0;
+    list-style: none;
+}
+.menu li{
+    border-bottom: 1px solid #575766;
+}
+.menu li:last-child{
+    border-bottom: none;
+}
+.menu a{
+    color: #5c06fc;
+    display: block;
+    padding: 2em 6em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.menu a:hover,
+.menu a:focus{
+    background: #e4b363;
+    color: #464655;
+}
+
+.menu--icon{
+    display: inline-block;
+    font-size: 1.5em;
+    margin-right: 1em;
+    width: 1.1em;
+    text-align: right;
+    color: rgba(10, 10, 10, 0.4);
+}
+
+.menu-toggle{
+   
+    padding: 1em;
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    
+}
+.menu-open .hamburguesa{
+    transform: rotate(45deg);
+}
+.menu-open .hamburguesa::before{
+    opacity: 0;
+}
+.menu-open .hamburguesa::after{
+    transform: translateY(-3px) rotate(-90deg);
+}
+.hamburguesa,
+.hamburguesa::before,
+.hamburguesa::after{
+    content: '';
+    display: block;
+    background: #ebebd3;
+    height: 3px;
+    width: 1.75em;
+    border-radius: 3px;
+    transition: all ease-in-out 500ms;
+}
+.hamburguesa::before{
+    transform: translateY(-6px);
+}
+.hamburguesa::after{
+    transform: translateY(3px);
+}
+
+.empresa {
+    background-color: grey;
+    width: 95%;
+    margin: 5px;
+    padding: 5px;
+    border: black 2px solid;
+    text-align: center;
+    
+}
+
+.postventa {
+    background-color: grey;
+    width: 95%;
+    margin: 5px;
+    padding: 5px;
+    border: black 2px solid;
+    text-align: center;
+    
+}
+
+.pie {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    height: 10%;
+}
+.pie img {
+    height: 10%;
+    width: 10%;
+}
+
+
+@media (min-width:700px){
+ .menu-toggle{
+      display:flex;
+  } 
+  .menu{
+      height: auto;
+      position: relative;
+      background: transparent;
+      float: right;
+      margin-right: 10px;
+      clip-path: initial;
+  } 
+  .menu li{
+      display: inline-block;
+      border: none;
+  }
+
+  .menu a{
+      padding: 0;
+      margin-left: 3em;
+  }
+  .menu--icon{
+      display: flex;
+  }
+  .menu a:hover,
+  .menu a:focus{
+      background: transparent;
+  }
+
+}

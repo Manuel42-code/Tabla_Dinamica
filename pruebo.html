@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form id="formdata">
+    <div>
+        <label for="modelo">modelo</label>
+        <input type="text" id="modelo" name="modelo">
+    </div>
+    <div>
+        <label for="codigo">codigo</label>
+        <input type="text" id="codigo" name="codigo">
+    </div>
+    <div>        
+        <label for="peso">peso</label>
+        <input type="text" id="peso" name="peso"></div>
+    <div>
+        <label for="motor-marca">motor-marca</label>
+        <input type="text" id="motor-marca" name="motor-marca">
+    </div>
+    <div>
+        <label for="motor-potencia">motor-potencia</label>
+        <input type="text" id="motor-potencia" name="motor-potencia">
+    </div>
+
+    
+    <div>
+        <button id="btn-añadir">Añadir</button>
+    </div>
+    <div>
+        <button id="btn-añadir3">Añadir 3</button>
+    </div>
+    <div>
+        <button id="borrar">Borrar</button>
+    </div>
+
+</form>
+
+<div class="tableformat">
+    <table id="productos">
+            <thead>
+                <tr>
+                    <th>modelo</th>
+                    <th>código</th>
+                    <th>peso</th>
+                    <th>motor-marca</th>
+                    <th>motor-potencia</th>
+                </tr>
+            </thead>
+
+            <tbody id="cuerpotabla">  </tbody>
+    </table>
+</div>
+
+    <script src="gato.js"></script>
+
+</body>
+</html>
